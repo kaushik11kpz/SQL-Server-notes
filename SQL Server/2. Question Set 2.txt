@@ -1,0 +1,53 @@
+Primary Key vs Unique Key
+2N's
+N-Null
+N-Number
+-Both don't allow duplicates.
+-Primary Key do not allow null values while Unique Key accept null value.
+-In a table only one Primary Key is allowed , while many unique keys can be put.
+
+char vs varchar
+-char is fixed length, varchar is variable is length.
+-char will occupy the same space in all entries, while varchar can be variable for each entry.
+
+char vs nchar
+-to store pure enlish character use char, n in nchar stands for unicode(non english character)
+-for 1 character char takes 1 byte, nchar takes 2 bytes.
+
+Use of Index in SQL Server
+-Index helps to improve search performances.
+-It creates a Balanced Tree structure thus search becomes faster, internally it creates Node and Leaf nodes to reach 
+the data quickly.
+
+Clustured Index vs Non-Clustured Index
+-Both have balanced tree.
+-In Clustured Index Leaf nodes points towards actual data/record, while non-clustured index Lead nodes points 
+towards Clustured Index.
+-This is why we can have only 1 Clustured Index and many non-Clustured Index.
+
+Function vs Stored Procedure
+-Function returns Computed Scalar values.
+-You cannot make permanent changes(insert,update,delete) inside function.
+-Stored Procedure is a mini program which can do anything.
+-It can make changes, backup database.
+-Funtion is for computation.
+-Only select is allowed for computation using Function.
+-Function can be called from Select/Where and from other stored procedure.
+-Mostly scalar value is output, sometimes Table valued funtion are also output of Function
+-Stored Procedure can change the environment.
+-Insert,Updates and Delete is allowed in Stored Procedure.
+-Stored Procedure cannot be executed from Select/Where or from other funtions.
+-Can have Single or Multiple Output.
+
+Triggers
+-Triggers are small piece of logic which you want to execute when certain events like insert,delete,update happens, once any of these event happens you want to execute that logic.
+-There are 2 types of Triggers
+1. After Trigger - It is fired after the event has happened.
+2. Instead Of Trigger - Intead of DML events logic gets executed.
+
+Identity in SQL Server
+-Identity helps to define auto increment column.
+
+
+
+

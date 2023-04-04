@@ -1,0 +1,41 @@
+3P's
+1. To the Point
+2. Be Prepared
+3. Be Practical with Examples
+Normalization
+-It is a database design technique to remove/avoid redundant data.
+-Normalization is implemented by Splitting tables into two, one with reference data and other with transaction data.
+
+Denormalization
+-It is a database design technique to improve search performance.
+-Due to splitting of table in normalization, data needed to be fetched from different tables, thus SQL queries becomes slow.
+-In denormalization, we merge different tables as our goal is to improve search performance.
+-Duplicate data is present in denormalization.
+
+OLTP vs OLAP
+OLTP-Online Transaction Processing.
+OLAP-Online Analytical Processing.
+-High load databases have high amount of queries.
+-In high performance database, to handle different types of queries effectively single database is divided into two databases 
+OLTP & OLAP.
+-Insert,Update,Delete in done in OLTP, while Read,Analyse is done in OLAP.
+-After any Insert,Update,Delete operations in OLTP, ETL(Extraction Transformation Loading) process happens which updates OLAP to
+OLTP.
+-In OLTP normalization is follwed, thus redundancy is reduced, we follow normalization design(1st,2nd,3rd normal forms).
+-In OLAP denormalization is followed to improve search performance and we follow denormalization design.
+
+1st, 2nd, 3rd Normal Form
+-A table is in 1NF when columns have atomic values. It should not have repeating groups.
+-If table is not following 1NF, it can contain Insert,Update,Delete anamolies.
+-A table is in 2NF if all the rules of 1NF is followed. All non-key columns should be fully dependent on the Primary Key.
+-A table is in 3NF if all the rules of 1NF and 2NF is followed. No transient dependency should be present.
+Transient dependency-Any non-key column depending directly on another non-key column.
+APT
+A-Atomici for 1NF
+P-No partial dependency for 2NF
+T-No transient dependency for 3NF
+
+
+
+
+

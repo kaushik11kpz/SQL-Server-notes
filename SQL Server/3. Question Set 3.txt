@@ -1,0 +1,22 @@
+Transaction
+-Transaction helps us to implement series of activities as one Logical Unit.
+-Either everything is successfull or everything rollback.
+
+Inner Join
+-Inner Join selects matching records from both table.
+
+Left Join
+-All the records from the left table selected and only matching records from the right table.
+
+Right Join
+-All the records from the right table and only matching record from the left table.
+
+Full Outer Join
+-All matching and unmatching records from both left and right table are selected.
+
+Cross Join
+-It is a cartesian product.
+-No 'on' clause is used.
+-Every record of left table will be mapped with every record of right table(cartesian product).
+
+
